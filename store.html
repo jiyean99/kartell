@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/store.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> 
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <nav>
+            <h1 class="logo">
+                <img src="images/header/logo.png" alt="main-logo">
+            </h1>
+            <ul class="gnb">
+                <li>
+                    <a href="index.html">kartell world</a>
+                </li>
+                <li>
+                    <a href="product.html">product</a>
+                </li>
+                <li class="nav-on">
+                    <a href="store.html">store</a>
+                </li>
+                <!-- 햄버거버튼 -->
+                <li class="ham-btn">
+                    <a class="menu-trigger" href="#">
+                        <span></span>
+                        <span></span>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+    <!-- header -->
+    <!-- 햄버거메뉴 -->
+    <article class="ham-menu">
+        <div class="ham-nav">
+            <div class="ham-gnb">
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            kartell world
+                        </a>
+                    </li>
+                    <li>
+                        <a href="product.html">
+                            product
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#">new</a>
+                            </li>
+                            <li>
+                                <a href="#">all</a>
+                            </li>
+                            <li>
+                                <a href="#">light</a>
+                            </li>
+                            <li>
+                                <a href="#">chair/sofa</a>
+                            </li>
+                            <li>
+                                <a href="#">storage</a>
+                            </li>
+                            <li>
+                                <a href="#">tables</a>
+                            </li>
+                            <li>
+                                <a href="#">accesories</a>
+                            </li>
+                            <li>
+                                <a href="#">tableware</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="store.html">
+                            store
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="ham-footer">
+            <div class="ham-btn close">
+                <a href="#">
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <div class="footer-wrap">
+                <ul>
+                    <li>
+                        Customer Center 1:1 문의
+                    </li>
+                    <li>
+                        liMON-FRI : AM 9:00 ~ PM 5:30 / LUNCH : PM 12:00 ~ PM 1:00<br>
+                        SAT, SUN, HOLIDAY OFF
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        ㈜한국가구 | 대표.최훈학 | 주소. 서울시 강남구 학동로 120(논현동, 한국가구)</li>
+                    <li>
+                        Tel. 02-2600-7000 | Fax. 02-2600-7007
+                    </li>
+                    <li>
+                        개인정보관리책임자 : 정훈정 | 통신판매업신고 제2018-서울강남-02590호 | 사업자등록번호 136-81-05002
+                    </li>
+                </ul>
+                <ul class="foot-sns">
+                    <li>
+                        <a href="#">
+                            <img src="images/footer/ft_blog.png" alt="footer-sns-icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/footer/ft_ytb.png" alt="footer-sns-icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/footer/ft_insta.png" alt="footer-sns-icon">
+                        </a>
+                    </li>
+                    <li class="copy-right">
+                        © 2020 KARTELL All Rights Reserved.a
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </article>
+    <!-- 햄버거메뉴 -->
+    <main>
+        <div class="store-page-wrap">
+            <!-- store-page1 신사플래그샵 -->
+            <div id="store1" class="store-page active">
+                <div class="store-wrap">
+                    <h3>
+                        신사 플래그샵
+                    </h3>
+                    <p>
+                        서울 강남구 신사동 634-4
+                    </p>
+                    <p>
+                        카르텔 상품을 둘러볼 수 있는 쇼룸 및 판매매장<br>
+                        최신 상품부터 베스트 아이템과 카르텔 공간 스타일링 팁까지<br>
+                        만나볼 수 있는 공식 서울 플래그샵입니다.
+                    </p>
+                    <dt>영업시간</dt>
+                    <dl>am 10:30 ~ pm 8:30</dl>
+                    <dt>매장연락처</dt>
+                    <dl>02-2012-2666</dl>
+                    <button>공간 미리보기</button>
+                </div>
+                <div class="store-img">
+                    <img src="images/storepage/sinsa-store.jpg" alt="store-image">
+                </div>
+            </div>
+            <!-- store-page2 용산 현대아이파크몰 -->
+            <div id="store2" class="store-page" >
+                <div class="store-wrap">
+                    <h3>
+                        용산 현대아이파크몰
+                    </h3>
+                    <p>
+                        서울 용산구 독서당로 46, 리빙파크 4F
+                    </p>
+                    <p>
+                        카르텔 용산 현대 아이파크몰 매장<br>
+                        최신 상품부터 베스트 아이템과 카르텔 공간 스타일링 팁까지<br>
+                        만나볼 수 있는 공식 서울 플래그샵입니다.
+                    </p>
+                    <dt>영업시간</dt>
+                    <dl>am 10:30 ~ pm 8:30</dl>
+                    <dt>매장연락처</dt>
+                    <dl>02-2012-2666</dl>
+                    <button>공간 미리보기</button>
+                </div>
+                <div class="store-img">
+                    <img src="images/storepage/youngsan-store.jpg" alt="store-image">
+                </div>
+            </div>
+            <!-- store-page3 부산직영점 -->
+            <div id="store3" class="store-page" >
+                <div class="store-wrap">
+                    <h3>
+                        부산직영점
+                    </h3>
+                    <p>
+                        부산 해운대구 중동 1398-7, 마린타워 1-3F
+                    </p>
+                    <p>
+                        부산 한국가구 직영점 매장<br>
+                        카르텔 및 다양한 수입가구 브랜드를 만나볼 수 있는<br>
+                        한국가구 부산 직영 매장입니다.
+                    </p>
+                    <dt>영업시간</dt>
+                    <dl>am 10:30 ~ pm 8:30</dl>
+                    <dt>매장연락처</dt>
+                    <dl>02-2012-2666</dl>
+                    <button>공간 미리보기</button>
+                </div>
+                <div class="store-img">
+                    <img src="images/storepage/busan-store.jpg" alt="store-image">
+                </div>
+            </div>
+            <!-- store-page4 논현직영점 -->
+            <div id="store4" class="store-page" >
+                <div class="store-wrap">
+                    <h3>
+                        논현직영점
+                    </h3>
+                    <p>
+                        서울 강남구 학동로 120
+                    </p>
+                    <p>
+                        논현 한국가구 직영점 매장<br>
+                        카르텔 및 다양한 수입 가구 브랜드를 만나볼 수 있는<br>
+                        한국가구 최대 매장입니다. 
+                    </p>
+                    <dt>영업시간</dt>
+                    <dl>am 10:30 ~ pm 8:30</dl>
+                    <dt>매장연락처</dt>
+                    <dl>02-2012-2666</dl>
+                    <button>공간 미리보기</button>
+                </div>
+                <div class="store-img">
+                    <img src="images/storepage/nonhyun-store.jpg" alt="store-image">
+                </div>
+            </div>
+            <!-- store-page5 롯데백화점 부산점 -->
+            <div id="store5" class="store-page" >
+                <div class="store-wrap">
+                    <h3>
+                        롯데백화점 부산점
+                    </h3>
+                    <p>
+                        부산 부산진구 가야대로 772 (부전동), 6F
+                    </p>
+                    <p>
+                        카르텔 롯데 백화점 부산점 매장<br>
+                        최신 상품부터 베스트 아이템과 카르텔 공간 스타일링 팁까지<br>
+                        만나볼 수 있는 공식 서울 플래그샵입니다.
+                    </p>
+                    <dt>영업시간</dt>
+                    <dl>am 10:30 ~ pm 8:30</dl>
+                    <br>
+                    <dt>매장연락처</dt>
+                    <dl>02-2012-2666</dl>
+                    <button>공간 미리보기</button>
+                </div>
+                <div class="store-img">
+                    <img src="images/storepage/busanlot-store.jpg" alt="store-image">
+                </div>
+            </div>
+        </div>
+        <!-- srotrepage-indi -->
+        <div class="storepage-indi">
+            <ul>
+                <li class="store-on">
+                    <a href="#store1">1</a>
+                </li>
+                <li>
+                    <a href="#store2">2</a>
+                </li>
+                <li>
+                    <a href="#store3">3</a>
+                </li>
+                <li>
+                    <a href="#store4">4</a>
+                </li>
+                <li>
+                    <a href="#store5">5</a>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <script>
+
+        $(function(){
+            $(".storepage-indi>ul>li").click(function(e){
+                e.preventDefault();
+                $(".storepage-indi>ul>li").removeClass("store-on");
+                $(this).addClass("store-on");
+
+                var i = $(this).index();
+
+                $(".store-page").removeClass("active").css("display","none")
+                $(".store-page").eq(i).addClass("active").css("display","block")
+
+            })
+        })
+    </script>
+    <!-- footer -->
+    <footer>
+        <div class="footer-wrap">
+            <ul class="foot-left">
+                <li>
+                    ㈜한국가구 | 대표.최훈학 | 주소. 서울시 강남구 학동로 120(논현동, 한국가구)</li>
+                <li>
+                    Tel. 02-2600-7000 | Fax. 02-2600-7007
+                </li>
+                <li>
+                    개인정보관리책임자 : 정훈정 | 통신판매업신고 제2018-서울강남-02590호 | 사업자등록번호 136-81-05002
+                </li>
+            </ul>
+            <ul class="foot-right">
+                <li>
+                    Customer Center 1:1 문의
+                </li>
+                <li>
+                    liMON-FRI : AM 9:00 ~ PM 5:30 / LUNCH : PM 12:00 ~ PM 1:00<br>
+                    SAT, SUN, HOLIDAY OFF
+                </li>
+            </ul>
+            <ul class="foot-sns">
+                <li>
+                    <a href="#">
+                        <img src="images/footer/ft_blog.png" alt="footer-sns-icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/footer/ft_ytb.png" alt="footer-sns-icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/footer/ft_insta.png" alt="footer-sns-icon">
+                    </a>
+                </li>
+                <li class="copy-right">
+                    © 2020 KARTELL All Rights Reserved.a
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!-- footer -->
+</body>

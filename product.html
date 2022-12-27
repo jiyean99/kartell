@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/product.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // tab관련 
+        $(function () {
+            $(".tab-menu>li").click(function (e) {
+                e.preventDefault();
+                $(".tab-menu>li").removeClass("product-on")
+                $(this).addClass("product-on")
+
+                var i = $(this).index();
+
+                $(".panel").removeClass("product-on").css("display", "none")
+                $(".panel").eq(i).addClass("product-on").css("display", "block")
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <nav>
+            <h1 class="logo">
+                <img src="images/header/logo.png" alt="main-logo">
+            </h1>
+            <ul class="gnb">
+                <li>
+                    <a href="index.html">kartell world</a>
+                </li>
+                <li class="nav-on">
+                    <a href="product.html">product</a>
+                </li>
+                <li>
+                    <a href="store.html">store</a>
+                </li>
+                <!-- 햄버거버튼 -->
+                <li class="ham-btn">
+                    <a href="#">
+                        <span></span>
+                        <span></span>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+    <!-- header -->
+
+    <!-- 햄버거메뉴 -->
+    <article class="ham-menu">
+        <div class="ham-nav">
+            <div class="ham-gnb">
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            kartell world
+                        </a>
+                    </li>
+                    <li>
+                        <a href="product.html">
+                            product
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#">new</a>
+                            </li>
+                            <li>
+                                <a href="#">all</a>
+                            </li>
+                            <li>
+                                <a href="#">light</a>
+                            </li>
+                            <li>
+                                <a href="#">chair/sofa</a>
+                            </li>
+                            <li>
+                                <a href="#">storage</a>
+                            </li>
+                            <li>
+                                <a href="#">tables</a>
+                            </li>
+                            <li>
+                                <a href="#">accesories</a>
+                            </li>
+                            <li>
+                                <a href="#">tableware</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="store.html">
+                            store
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="ham-footer">
+            <div class="ham-btn close">
+                <a href="#">
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <div class="footer-wrap">
+                <ul>
+                    <li>
+                        Customer Center 1:1 문의
+                    </li>
+                    <li>
+                        liMON-FRI : AM 9:00 ~ PM 5:30 / LUNCH : PM 12:00 ~ PM 1:00<br>
+                        SAT, SUN, HOLIDAY OFF
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        ㈜한국가구 | 대표.최훈학 | 주소. 서울시 강남구 학동로 120(논현동, 한국가구)</li>
+                    <li>
+                        Tel. 02-2600-7000 | Fax. 02-2600-7007
+                    </li>
+                    <li>
+                        개인정보관리책임자 : 정훈정 | 통신판매업신고 제2018-서울강남-02590호 | 사업자등록번호 136-81-05002
+                    </li>
+                </ul>
+                <ul class="foot-sns">
+                    <li>
+                        <a href="#">
+                            <img src="images/footer/ft_blog.png" alt="footer-sns-icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/footer/ft_ytb.png" alt="footer-sns-icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/footer/ft_insta.png" alt="footer-sns-icon">
+                        </a>
+                    </li>
+                    <li class="copy-right">
+                        © 2020 KARTELL All Rights Reserved.a
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </article>
+    <!-- 햄버거메뉴 -->
+
+    <!-- main -->
+    <section>
+        <h3 class="page-title">
+            kartell&#39;s product
+        </h3>
+        <article>
+            <ul class="tab-menu">
+                <li class="product-on">
+                    <a href="#new">new</a>
+                </li>
+                <li>
+                    <a href="#all">all</a>
+                </li>
+                <li>
+                    <a href="#lights">lights</a>
+                </li>
+                <li>
+                    <a href="#chair">chair/sofa</a>
+                </li>
+                <li>
+                    <a href="#storage">storage</a>
+                </li>
+                <li>
+                    <a href="#table">tables</a>
+                </li>
+                <li>
+                    <a href="#accs">accesories</a>
+                </li>
+                <li>
+                    <a href="#tablewear">tableware</a>
+                </li>
+            </ul>
+            <ul class="tab-panel">
+                <!-- new -->
+                <li id="new" class="panel tab-on">
+                    <div class="procduct-wrap">
+                        <div class="product-door">
+                            <img src="images/productpage/new-door.jpg" alt="product main images">
+                        </div>
+                        <div>
+                            <h4>Thierry side table</h4>
+                            <p>각기 다른 3~4가지의 컬러 및 높낮이로<br>다양한 방식으로 배치할 수 있는 사이드 테이블입니다.</p>
+                            <button>구매하기</button>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="images/productpage/favorite-icon.png" alt="favorite-icon">
+                            </a>
+                            <img src="images/productpage/new (1).jpg" alt="product-thumbnail">
+                            <p class="product-name">
+                                카르텔 띠에리 사이드테이블 버건디
+                            </p>
+                            <p class="product-price">
+                                1,229,000원
+                            </p>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="images/productpage/favorite-icon.png" alt="favorite-icon">
+                            </a>
+                            <img src="images/productpage/new (2).jpg" alt="product-thumbnail">
+                            <p class="product-name">
+                                카르텔 띠에리 사이드테이블 블루
+                            </p>
+                            <p class="product-price">
+                                1,229,000원
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <!-- all -->
+                <li id="all" class="panel">
+                    <div class="procduct-wrap">
+                        <div class="product-door">
+                            <img src="images/productpage/all-door.jpg" alt="product main images">
+                        </div>
+                        <div>
+                            <h4>Thierry side table</h4>
+                            <p>각기 다른 3~4가지의 컬러 및 높낮이로<br>다양한 방식으로 배치할 수 있는 사이드 테이블입니다.</p>
+                            <button>구매하기</button>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="images/productpage/favorite-icon.png" alt="favorite-icon">
+                            </a>
+                            <img src="images/productpage/all (1).jpg" alt="product-thumbnail">
+                            <p class="product-name">
+                                카르텔 띠에리 사이드테이블 버건디
+                            </p>
+                            <p class="product-price">
+                                1,229,000원
+                            </p>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="images/productpage/favorite-icon.png" alt="favorite-icon">
+                            </a>
+                            <img src="images/productpage/all (2).jpg" alt="product-thumbnail">
+                            <p class="product-name">
+                                카르텔 띠에리 사이드테이블 블루
+                            </p>
+                            <p class="product-price">
+                                1,229,000원
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <!-- light -->
+                <li id="lights" class="panel">
+                    <div class="procduct-wrap">
+                        <div class="product-door">
+                            <img src="images/productpage/light-door.jpg" alt="product main images">
+                        </div>
+                        <div>
+                            <h4>Thierry side table</h4>
+                            <p>각기 다른 3~4가지의 컬러 및 높낮이로<br>다양한 방식으로 배치할 수 있는 사이드 테이블입니다.</p>
+                            <button>구매하기</button>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="images/productpage/favorite-icon.png" alt="favorite-icon">
+                            </a>
+                            <img src="images/productpage/light (1).jpg" alt="product-thumbnail">
+                            <p class="product-name">
+                                카르텔 띠에리 사이드테이블 버건디
+                            </p>
+                            <p class="product-price">
+                                1,229,000원
+                            </p>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="images/productpage/favorite-icon.png" alt="favorite-icon">
+                            </a>
+                            <img src="images/productpage/light (2).jpg" alt="product-thumbnail">
+                            <p class="product-name">
+                                카르텔 띠에리 사이드테이블 블루
+                            </p>
+                            <p class="product-price">
+                                1,229,000원
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <!-- chiair/sofa -->
+                <li id="chair" class="panel">
+                    <div class="procduct-wrap">
+                        <div class="product-door">
+                            <img src="images/productpage/chair-door.jpg" alt="product main images">
+                        </div>
+                        <div>
+                            <h4>Thierry side table</h4>
+                            <p>각기 다른 3~4가지의 컬러 및 높낮이로<br>다양한 방식으로 배치할 수 있는 사이드 테이블입니다.</p>
+                            <button>구매하기</button>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="images/productpage/favorite-icon.png" alt="favorite-icon">
+                            </a>
+                            <img src="images/productpage/chair (1).jpg" alt="product-thumbnail">
+                            <p class="product-name">
+                                카르텔 띠에리 사이드테이블 버건디
+                            </p>
+                            <p class="product-price">
+                                1,229,000원
+                            </p>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="images/productpage/favorite-icon.png" alt="favorite-icon">
+                            </a>
+                            <img src="images/productpage/chair (2).jpg" alt="product-thumbnail">
+                            <p class="product-name">
+                                카르텔 띠에리 사이드테이블 블루
+                            </p>
+                            <p class="product-price">
+                                1,229,000원
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <!-- storage -->
+                <li id="storage" class="panel">
+                    <div class="procduct-wrap">
+                        <div class="product-door">
+                            <img src="images/productpage/storage-door.jpg" alt="product main images">
+                        </div>
+                        <div>
+                            <h4>Thierry side table</h4>
+                            <p>각기 다른 3~4가지의 컬러 및 높낮이로<br>다양한 방식으로 배치할 수 있는 사이드 테이블입니다.</p>
+                            <button>구매하기</button>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="images/productpage/favorite-icon.png" alt="favorite-icon">
+                            </a>
+                            <img src="images/productpage/storage (1).jpg" alt="product-thumbnail">
+                            <p class="product-name">
+                                카르텔 띠에리 사이드테이블 버건디
+                            </p>
+                            <p class="product-price">
+                                1,229,000원
+                            </p>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="images/productpage/favorite-icon.png" alt="favorite-icon">
+                            </a>
+                            <img src="images/productpage/storage (2).jpg" alt="product-thumbnail">
+                            <p class="product-name">
+                                카르텔 띠에리 사이드테이블 블루
+                            </p>
+                            <p class="product-price">
+                                1,229,000원
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <!-- table -->
+                <li id="table" class="panel">
+                    <div class="procduct-wrap">
+                        <div class="product-door">
+                            <img src="images/productpage/table-door.jpg" alt="product main images">
+                        </div>
+                        <div>
+                            <h4>Thierry side table</h4>
+                            <p>각기 다른 3~4가지의 컬러 및 높낮이로<br>다양한 방식으로 배치할 수 있는 사이드 테이블입니다.</p>
+                            <button>구매하기</button>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="images/productpage/favorite-icon.png" alt="favorite-icon">
+                            </a>
+                            <img src="images/productpage/table (1).jpg" alt="product-thumbnail">
+                            <p class="product-name">
+                                카르텔 띠에리 사이드테이블 버건디
+                            </p>
+                            <p class="product-price">
+                                1,229,000원
+                            </p>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="images/productpage/favorite-icon.png" alt="favorite-icon">
+                            </a>
+                            <img src="images/productpage/table (2).jpg" alt="product-thumbnail">
+                            <p class="product-name">
+                                카르텔 띠에리 사이드테이블 블루
+                            </p>
+                            <p class="product-price">
+                                1,229,000원
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <!-- accesories -->
+                <li id="accs" class="panel">
+                    <div class="procduct-wrap">
+                        <div class="product-door">
+                            <img src="images/productpage/acc-door.jpg" alt="product main images">
+                        </div>
+                        <div>
+                            <h4>Thierry side table</h4>
+                            <p>각기 다른 3~4가지의 컬러 및 높낮이로<br>다양한 방식으로 배치할 수 있는 사이드 테이블입니다.</p>
+                            <button>구매하기</button>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="images/productpage/favorite-icon.png" alt="favorite-icon">
+                            </a>
+                            <img src="images/productpage/acc (1).png" alt="product-thumbnail">
+                            <p class="product-name">
+                                카르텔 띠에리 사이드테이블 버건디
+                            </p>
+                            <p class="product-price">
+                                1,229,000원
+                            </p>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="images/productpage/favorite-icon.png" alt="favorite-icon">
+                            </a>
+                            <img src="images/productpage/acc (2).png" alt="product-thumbnail">
+                            <p class="product-name">
+                                카르텔 띠에리 사이드테이블 블루
+                            </p>
+                            <p class="product-price">
+                                1,229,000원
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <!-- tablewear -->
+                <li id="tablewear" class="panel">
+                    <div class="procduct-wrap">
+                        <div class="product-door">
+                            <img src="images/productpage/tablewear-door.jpg" alt="product main images">
+                        </div>
+                        <div>
+                            <h4>Thierry side table</h4>
+                            <p>각기 다른 3~4가지의 컬러 및 높낮이로<br>다양한 방식으로 배치할 수 있는 사이드 테이블입니다.</p>
+                            <button>구매하기</button>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="images/productpage/favorite-icon.png" alt="favorite-icon">
+                            </a>
+                            <img src="images/productpage/tablewear (1).jpg" alt="product-thumbnail">
+                            <p class="product-name">
+                                카르텔 띠에리 사이드테이블 버건디
+                            </p>
+                            <p class="product-price">
+                                1,229,000원
+                            </p>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img src="images/productpage/favorite-icon.png" alt="favorite-icon">
+                            </a>
+                            <img src="images/productpage/tablewear (2).jpg" alt="product-thumbnail">
+                            <p class="product-name">
+                                카르텔 띠에리 사이드테이블 블루
+                            </p>
+                            <p class="product-price">
+                                1,229,000원
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </article>
+    </section>
+    <!-- footer -->
+    <footer>
+        <div class="footer-wrap">
+            <ul class="foot-left">
+                <li>
+                    ㈜한국가구 | 대표.최훈학 | 주소. 서울시 강남구 학동로 120(논현동, 한국가구)</li>
+                <li>
+                    Tel. 02-2600-7000 | Fax. 02-2600-7007
+                </li>
+                <li>
+                    개인정보관리책임자 : 정훈정 | 통신판매업신고 제2018-서울강남-02590호 | 사업자등록번호 136-81-05002
+                </li>
+            </ul>
+            <ul class="foot-right">
+                <li>
+                    Customer Center 1:1 문의
+                </li>
+                <li>
+                    liMON-FRI : AM 9:00 ~ PM 5:30 / LUNCH : PM 12:00 ~ PM 1:00<br>
+                    SAT, SUN, HOLIDAY OFF
+                </li>
+            </ul>
+            <ul class="foot-sns">
+                <li>
+                    <a href="#">
+                        <img src="images/footer/ft_blog.png" alt="footer-sns-icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/footer/ft_ytb.png" alt="footer-sns-icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/footer/ft_insta.png" alt="footer-sns-icon">
+                    </a>
+                </li>
+                <li class="copy-right">
+                    © 2020 KARTELL All Rights Reserved.a
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!-- footer -->
+</body>
+
+</html>

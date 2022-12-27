@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/mainstyle.css">
+    <link rel="stylesheet" href="css/style.scss">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> 
+    <script src="js/script.js"></script>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/noframework.waypoints.min.js'></script><script  src="./script.js"></script>
+    <script>
+        /* 스크롤 모션 스크립트 */
+        var mHtml = $("html");
+        var page = 1;
+
+
+        mHtml.animate({scrollTop : 0},10);
+
+        $(window).on("wheel", function(e) {
+            if(mHtml.is(":animated")) return;
+            if(e.originalEvent.deltaY > 0) {
+                if(page == 4) return;
+                page++;
+            } else if(e.originalEvent.deltaY < 0) {
+                if(page == 1) return;
+                page--;
+            }
+            var posTop =(page-1) * $(window).height();
+            mHtml.animate({scrollTop : posTop});
+        })
+    </script>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <nav>
+            <h1 class="logo">
+                <img src="images/header/logo.png" alt="main-logo">
+            </h1>
+            <ul class="gnb">
+                <li class="nav-on">
+                    <a href="index.html">kartell world</a>
+                </li>
+                <li>
+                    <a href="product.html">product</a>
+                </li>
+                <li>
+                    <a href="store.html">store</a>
+                </li>
+                <!-- 햄버거버튼 -->
+                <li class="ham-btn">
+                    <a class="menu-trigger" href="#">
+                        <span></span>
+                        <span></span>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+    <!-- header -->
+    <!-- 햄버거메뉴 -->
+    <article class="ham-menu">
+        <div class="ham-nav">
+            <div class="ham-gnb">
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            kartell world
+                        </a>
+                    </li>
+                    <li>
+                        <a href="product.html">
+                            product
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#">new</a>
+                            </li>
+                            <li>
+                                <a href="#">all</a>
+                            </li>
+                            <li>
+                                <a href="#">light</a>
+                            </li>
+                            <li>
+                                <a href="#">chair/sofa</a>
+                            </li>
+                            <li>
+                                <a href="#">storage</a>
+                            </li>
+                            <li>
+                                <a href="#">tables</a>
+                            </li>
+                            <li>
+                                <a href="#">accesories</a>
+                            </li>
+                            <li>
+                                <a href="#">tableware</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="store.html">
+                            store
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="ham-footer">
+            <div class="ham-btn close">
+                <a href="#">
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+            <div class="footer-wrap">
+                <ul>
+                    <li>
+                        Customer Center 1:1 문의
+                    </li>
+                    <li>
+                        liMON-FRI : AM 9:00 ~ PM 5:30 / LUNCH : PM 12:00 ~ PM 1:00<br>
+                        SAT, SUN, HOLIDAY OFF
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        ㈜한국가구 | 대표.최훈학 | 주소. 서울시 강남구 학동로 120(논현동, 한국가구)</li>
+                    <li>
+                        Tel. 02-2600-7000 | Fax. 02-2600-7007
+                    </li>
+                    <li>
+                        개인정보관리책임자 : 정훈정 | 통신판매업신고 제2018-서울강남-02590호 | 사업자등록번호 136-81-05002
+                    </li>
+                </ul>
+                <ul class="foot-sns">
+                    <li>
+                        <a href="#">
+                            <img src="images/footer/ft_blog.png" alt="footer-sns-icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/footer/ft_ytb.png" alt="footer-sns-icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/footer/ft_insta.png" alt="footer-sns-icon">
+                        </a>
+                    </li>
+                    <li class="copy-right">
+                        © 2020 KARTELL All Rights Reserved.a
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </article>
+    <!-- 햄버거메뉴 -->
+    <!-- main section -->
+    <div id="section1" class="main section clearfix">
+        <video src="images/main/PC.mp4"autoplay controls></video>
+    </div>
+    <!-- designer section -->
+    <div id="section2" class="design section clearfix">
+        <h3 class="section-title">
+            designers
+        </h3>
+        <article>
+            <div>
+                <img src="images/section1/designer (1).jpg" alt="designer-img">
+                <p>Ferruccio Laviani</p>
+            </div>
+            <div>
+                <img src="images/section1/designer (2).jpg" alt="designer-img">
+                <p>Philippe Starck</p>
+            </div>
+            <div>
+                <img src="images/section1/designer (3).jpg" alt="designer-img">
+                <p>Piero Lissoni</p>
+            </div>
+            <div>
+                <img src="images/section1/designer (4).jpg" alt="designer-img">
+                <p>Patricia Urquiola</p>
+            </div>
+            <div>
+                <img src="images/section1/designer (5).jpg" alt="designer-img">
+                <p>Tokujin Yoshioka</p>
+            </div>
+            <div>
+                <img src="images/section1/designer (6).jpg" alt="designer-img">
+                <p>Mario Bellini</p>
+            </div>
+            <div>
+                <img src="images/section1/designer (7).jpg" alt="designer-img">
+                <p>Ronan & Erwan Bouroullec</p>
+            </div>
+            <div>
+                <img src="images/section1/designer (8).jpg" alt="designer-img">
+                <p>Jean-marie Massaud</p>
+            </div>
+        </article>
+    </div>
+    <!-- planet section -->
+    <div id="section3" class="planet section clearfix">
+        <div class="section3-wrap">
+            <h3 class="section-title">
+                kartell Loves the planet
+            </h3>
+            <p>
+                카르텔은 70년의 판타스틱 플라스틱의 행보를<br>멈추지 않고 걸어나가고 있습니다.
+            </p>
+            <button>
+                더보기
+            </button>
+            <!-- contents slide -->
+            <div>
+                <input type="radio" name="slider" id="slide-1" class="slider__radio" />
+                <input type="radio" name="slider" id="slide-2" class="slider__radio" />
+                <input type="radio" name="slider" id="slide-3" class="slider__radio" checked/>
+                <input type="radio" name="slider" id="slide-4" class="slider__radio" />
+                <input type="radio" name="slider" id="slide-5" class="slider__radio" />
+        
+                <div class="slider__holder">
+                <label for="slide-1" class="slider__item slider__item--1">
+                    <div class="slider__item-content">
+                        <img src="images/section2/section2-slide (1).jpg" alt="section2-imgslide">
+                    </div>
+                </label>
+                <!-- Slider__item -->
+        
+                <label for="slide-2" class="slider__item slider__item--2">
+                    <div class="slider__item-content">
+                        <img src="images/section2/section2-slide (3).jpg" alt="section2-imgslide">
+                    </div>
+                </label>
+                <!-- Slider__item -->
+        
+                <label for="slide-3" class="slider__item slider__item--3">
+                    <div class="slider__item-content">
+                        <img src="images/section2/section2-slide (2).jpg" alt="section2-imgslide">
+                    </div>
+                </label>
+                <!-- Slider__item -->
+        
+                <label for="slide-4" class="slider__item slider__item--4">
+                    <div class="slider__item-content">
+                        <img src="images/section2/section2-slide (1).jpg" alt="section2-imgslide">
+                    </div>
+                </label>
+                <!-- Slider__item -->
+        
+                <label for="slide-5" class="slider__item slider__item--5">
+                    <div class="slider__item-content">
+                        <img src="images/section2/section2-slide (2).jpg" alt="section2-imgslide">
+                    </div>
+                </label>
+                <!-- Slider__item -->
+                </div>
+                <!-- Slider Holder -->
+            </div>
+        </div>
+    </div>
+    <!-- footer section -->
+    <div id="section4" class="footer section clearfix">
+        <article class="customer-section">
+            <p>
+                Customer Center 1:1 문의
+            </p>
+            <p>
+                MON-FRI : AM 9:00 ~ PM 5:30 / LUNCH : PM 12:00 ~ PM 1:00<br>
+                SAT, SUN, HOLIDAY OFF  
+            </p>
+        </article>
+        <article class="news-letter">
+            <p>
+                최신 소식을 받아보고 뉴스레터를 구독하세요.
+            </p>
+            <p>
+                <a href="#">뉴스레터 구독하기</a>
+            </p>
+        </article>
+        <article class="footer-info">
+            <p>
+                ㈜한국가구 | 대표.최훈학 | 주소. 서울시 강남구 학동로 120(논현동, 한국가구)<br>
+                Tel. 02-2600-7000 | Fax. 02-2600-7007<br>
+                개인정보관리책임자 : 정훈정 | 통신판매업신고 제2018-서울강남-02590호 | 사업자등록번호 136-81-05002
+            </p>
+        </article>
+        <article class="sns-icon">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="images/footer/ft_blog.png" alt="footer-sns-blogicon">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/footer/ft_ytb.png" alt="footer-sns-youtubeicon">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/footer/ft_insta.png" alt="footer-sns-instagramicon">
+                    </a>
+                </li>
+            </ul>
+            <p>
+                © 2020 KARTELL All Rights Reserved.a
+            </p>
+        </article>
+        <div class="foot-bg">
+            <img src="images/footer/img-anteprima.jpg" alt="footer-bg">
+        </div>
+    </div>
+    <!-- page indicator -->
+    <a href="#">
+        <div class="page-count color-transform">
+            <span>0</span><p class="section-current"></p>
+            <p class="indi-icon">
+                <img src="images/header/main-indi.png" alt="indicator-icon">
+            </p>
+            <span>0</span><p class="section-count"></p>
+        </div>
+    </a>
+
+</body>
+</html>
